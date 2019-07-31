@@ -130,6 +130,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # the URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
 
+# simplified static file serving
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Heroku: Update database configuration from $DATABASE_URL.
